@@ -1,0 +1,762 @@
+<!doctype html>
+<html lang="id">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Undangan Ulang Tahun — Layalii Lounge Asstro Arabia</title>
+  <meta name="description" content="Undangan digital peresmian Layalii Lounge Asstro Arabia — Grand Opening" />
+  <meta name="theme-color" content="#0f172a" />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&family=Playfair+Display:wght@500;700&display=swap" rel="stylesheet">
+
+  <style>
+
+/* ===== ANIMATIONS ===== */
+
+/* fade & slide hero */
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* zoom-in logo */
+@keyframes zoomIn {
+  from {
+    opacity: 0;
+    transform: scale(0.85);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+/* smooth pulse countdown */
+@keyframes pulseSoft {
+  0% { transform: scale(1); }
+  50% { transform: scale(1.05); }
+  100% { transform: scale(1); }
+}
+
+/* shimmer background */
+@keyframes shimmer {
+  0% { background-position: -200px 0; }
+  100% { background-position: 200px 0; }
+}
+
+/* apply animations */
+.logo {
+  animation: zoomIn 1.2s ease-out;
+}
+
+.hero-title {
+  animation: fadeUp 1s ease-out 0.2s both;
+}
+
+.hero-sub {
+  animation: fadeUp 1s ease-out 0.4s both;
+}
+
+.hero-pills {
+  animation: fadeUp 1s ease-out 0.6s both;
+}
+
+.hero-countdown .cd-box {
+  animation: pulseSoft 1.5s infinite ease-in-out;
+}
+
+/* card reveal on scroll */
+.card {
+  opacity: 0;
+  transform: translateY(40px);
+  transition: all 0.8s ease;
+}
+
+.card.show {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Hover anim */
+.agenda-card {
+  transition: all .3s ease;
+}
+
+.agenda-card:hover {
+  transform: translateY(-3px) scale(1.01);
+  box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+}
+
+
+    :root{
+      --dark:#1e2a22;
+      --accent:#b33a2f;
+      --light:#f7f7f5;
+      --muted:#6b736d;
+      --glass: rgba(255,255,255,0.12);
+      --max-width:1100px;
+    }
+    *{box-sizing:border-box}
+    html,body{height:100%;}
+    body{
+      margin:0;
+      font-family:'Poppins',sans-serif;
+      background:var(--light);
+      color:#222;
+      -webkit-font-smoothing:antialiased;
+      -moz-osx-font-smoothing:grayscale;
+      line-height:1.6;
+    }
+
+    /* ---------- HERO ---------- */
+    .hero {
+      height:100vh;
+      min-height:640px;
+      background: url('/assets/Asstro-Punclut-1.png') center/cover no-repeat;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      position:relative;
+      text-align:center;
+      padding:28px;
+      overflow:hidden;
+    }
+    .hero::before{
+      content:"";
+      position:absolute;
+      inset:0;
+      background: linear-gradient(180deg, rgba(0,0,0,0.30), rgba(0,0,0,0.18));
+      z-index:1;
+    }
+    .hero-inner{
+      position:relative;
+      z-index:2;
+      max-width:var(--max-width);
+      width:100%;
+      padding: 10px 20px;
+      color:#fff;
+    }
+    .logo{
+      width:300px;
+      max-width:60%;
+      display:block;
+      margin:0 auto 14px;
+      filter: drop-shadow(0 6px 18px rgba(0,0,0,0.45));
+    }
+    .hero-title{
+      font-family:'Playfair Display', serif;
+      font-size:48px;
+      margin:6px 0 12px;
+      line-height:1.05;
+      font-weight:700;
+    }
+    .hero-sub{
+      max-width:760px;
+      margin:0 auto 18px;
+      font-weight:bold;
+      font-size:18px;
+      color:rgba(255,255,255,0.95);
+    }
+    .ucapan {
+       max-width:760px;
+      margin:0 auto 18px;
+      font-weight:300;
+      font-size:18px;
+      color:rgba(255,255,255,0.95);
+    }
+    .hero-pills{
+      display:flex;
+      gap:12px;
+      justify-content:center;
+      flex-wrap:wrap;
+      margin-top:14px;
+    }
+    .pill{
+      background: rgba(255,255,255,0.14);
+      color:#fff;
+      padding:10px 18px;
+      border-radius:28px;
+      border:1px solid rgba(255,255,255,0.12);
+      font-size:0.95rem;
+      backdrop-filter: blur(4px);
+    }
+
+    /* countdown bar under hero */
+  .hero-countdown{
+  margin-top:18px;
+  display:flex;
+  gap:12px;
+  justify-content:center;
+  align-items:stretch;   /* ✅ Bikin semua box sejajar */
+  flex-wrap:nowrap;      /* ✅ Paksa satu baris */
+}
+
+.cd-box{
+  background: rgba(255,255,255,0.95);
+  color:var(--dark);
+  padding:12px 0;
+  border-radius:12px;
+  width:80px;            /* ✅ Lebih stabil dibanding min-width */
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  justify-content:center;
+  box-shadow:0 8px 20px rgba(0,0,0,0.08);
+  text-align:center;
+}
+
+    .cd-val{ font-weight:700; font-size:20px; color:var(--accent); display:block; }
+    .cd-label{ font-size:12px; color:var(--muted); margin-top:6px; display:block; }
+
+    /* ---------- CONTENT ---------- */
+    main{
+      max-width:var(--max-width);
+      margin: 40px auto;
+      padding: 0 18px 60px;
+    }
+    .card{
+      background:#fff;
+      border-radius:14px;
+      padding:28px;
+      margin-bottom:28px;
+      box-shadow:0 10px 30px rgba(0,0,0,0.06);
+    }
+    h2{
+      font-family:'Playfair Display', serif;
+      font-size:28px;
+      margin:0 0 12px;
+      text-align:center;
+    }
+    p.lead-center{
+      text-align:center;
+      color:var(--muted);
+      max-width:900px;
+      margin:0 auto 12px;
+    }
+
+    /* event details layout */
+    .grid-3{
+      display:grid;
+      grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+      gap:18px;
+      margin-top:14px;
+    }
+    .meta{
+      background:linear-gradient(180deg,#fff,#fbfbfb);
+      border-radius:12px;
+      padding:16px;
+      text-align:center;
+      box-shadow:0 6px 18px rgba(0,0,0,0.04);
+    }
+    .meta strong{ display:block; font-size:16px; margin-bottom:8px; }
+    .meta small{ color:var(--muted); display:block; }
+
+    /* gallery */
+/* Gallery Center */
+/* ===== GALLERY GRID ===== */
+.gallery-grid{
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 20px; /* 🔥 jarak antar foto */
+  margin-top: 24px;
+}
+
+.gallery-grid img{
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 16px;
+  box-shadow: 0 6px 18px rgba(0,0,0,0.08);
+  transition: transform .3s ease, box-shadow .3s ease;
+}
+
+/* Hover elegan */
+.gallery-grid img:hover{
+  transform: scale(1.03);
+  box-shadow: 0 10px 26px rgba(0,0,0,0.12);
+}
+
+/* Mobile */
+@media (max-width: 600px){
+  .gallery-grid img{
+    height: 160px;
+  }
+}
+
+
+.gallery-single img{
+  width:100%;
+  max-width:600px;     /* 🔥 biar gak terlalu lebar */
+  height:300px;
+  object-fit:cover;
+  border-radius:16px;
+  box-shadow:0 6px 20px rgba(0,0,0,0.08);
+  margin:0 auto;
+  display:block;
+}
+
+    /* map */
+    .map-wrap iframe{
+      width:100%;
+      height:320px;
+      border:0;
+      border-radius:12px;
+      box-shadow:0 8px 20px rgba(0,0,0,0.06);
+    }
+
+    /* contact row */
+    .contact-row{
+      display:flex;
+      gap:14px;
+      align-items:center;
+      justify-content:center;
+      flex-wrap:wrap;
+      margin-top:12px;
+    }
+    .contact-card{
+      background:#fff;
+      border-radius:12px;
+      padding:12px 16px;
+      box-shadow:0 6px 16px rgba(0,0,0,0.04);
+      display:flex;
+      gap:10px;
+      align-items:center;
+    }
+    .wa-btn{
+      display:inline-block;
+      padding:10px 14px;
+      background:#25D366;
+      color:#fff;
+      border-radius:10px;
+      text-decoration:none;
+      font-weight:700;
+    }
+
+    /* audio control floating */
+    .audio-fixed{
+      position:fixed;
+      right:16px;
+      bottom:16px;
+      z-index:9999;
+      display:flex;
+      gap:8px;
+    }
+    .audio-btn{
+      background:rgba(0,0,0,0.6);
+      color:#fff;
+      border:none;
+      padding:10px 12px;
+      border-radius:10px;
+      cursor:pointer;
+      font-weight:600;
+    }
+
+    footer{
+      margin-top:28px;
+      padding:24px 18px;
+      text-align:center;
+      background:var(--dark);
+      color:#fff;
+      border-radius:12px;
+    }
+
+    /* small screens */
+    @media (max-width:720px){
+      .hero-title{ font-size:32px; }
+      .hero-sub{ font-size:16px; }
+      .cd-val{ font-size:18px; }
+      .gallery img{ height:140px; }
+    }
+    /* Detail Section */
+.detail-card {
+  padding: 40px 30px;
+  border-radius: 20px;
+}
+
+.detail-grid {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+  flex-wrap: wrap;
+  margin-top: 20px;
+}
+
+.detail-item {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  background: rgba(255,255,255,0.5);
+  border: 1px solid rgba(0,0,0,0.08);
+  padding: 16px 20px;
+  border-radius: 14px;
+  width: 100%;
+  max-width: 310px;
+}
+
+.detail-item strong {
+  display: block;
+  font-size: 1rem;
+}
+
+.detail-item small {
+  color: var(--muted);
+  font-size: 0.88rem;
+}
+
+.detail-icon {
+  font-size: 1.7rem;
+  background: rgba(255,255,255,0.7);
+  padding: 10px;
+  border-radius: 12px;
+  min-width: 48px;
+  text-align: center;
+}
+
+/* Section */
+.org-section {
+  padding: 50px 20px;
+  background: #fff;
+  text-align: center;
+}
+
+.org-section h2 {
+  font-size: 26px;
+  margin-bottom: 40px;
+}
+
+.agenda-cards{
+  padding:36px 16px;
+  max-width:520px;   /* 🔥 biar card pendek */
+  margin:0 auto;
+}
+
+.agenda-cards h2{
+  text-align:center;
+  font-size:26px;
+  margin-bottom:20px;
+}
+
+.agenda-card{
+  background:#fff;
+  border-radius:14px;
+  padding:14px 16px;
+  font-size:14px;
+  box-shadow:0 4px 14px rgba(0,0,0,0.05);
+  margin-bottom:10px;
+  text-align:center;  /* ✅ tulisan tengah */
+}
+
+.agenda-card .time{
+  font-weight:600;
+  color:#ff0000;
+  font-size:13px;
+}
+
+.agenda-card .text{
+  margin-top:4px;
+}
+
+
+
+  </style>
+</head>
+<body>
+
+  <!-- HERO -->
+  <header class="hero" role="banner" aria-label="Hero Layalii Lounge Asstro Arabia">
+    <div class="hero-inner">
+      <img src="assets/Asstro-Punclut.png" alt="Asstro  Skyview Logo" class="logo" />
+      <h2 class="hero-title">Undangan Ulang Tahun ke-55 <br> H. Asep Haelusna</h2>
+      <div class="hero-sub">
+      <h4>Kepada Yth:</h4>
+     <strong id="guestName">Tamu Undangan</strong>
+      <div id="guestInfo"></div>
+      </div>
+      <p class="ucapan">
+        <span>
+          Dengan hormat kami mengundang Bapak/Ibu untuk menghadiri perayaan ulang tahun ke-55 Bapak H. Asep Haelusna di Layalii Lounge Asstro Arabia, sesudah buka puasa.
+      </p>
+
+
+      <div class="hero-pills" aria-hidden="false">
+        <div class="pill">Selasa, 17 Maret 2026</div>
+        <div class="pill">18:00 WIB — Selesai</div>
+        <div class="pill">Layalii Lounge Asstro Arabia</div>
+      </div>
+
+      <div class="hero-countdown" style="margin-top:18px;">
+        <div class="cd-box" aria-live="polite">
+          <span class="cd-val" id="cd-days">1</span>
+          <span class="cd-label">Hari</span>
+        </div>
+        <div class="cd-box">
+          <span class="cd-val" id="cd-hours">23</span>
+          <span class="cd-label">Jam</span>
+        </div>
+        <div class="cd-box">
+          <span class="cd-val" id="cd-min">43</span>
+          <span class="cd-label">Menit</span>
+        </div>
+        <div class="cd-box">
+          <span class="cd-val" id="cd-sec">06</span>
+          <span class="cd-label">Detik</span>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- MAIN -->
+  <main role="main" aria-labelledby="main-title">
+
+    <!-- Sambutan -->
+    <section class="card" id="sambutan" aria-labelledby="sambutan-title">
+      <h2 id="sambutan-title">Sambutan Pembuka</h2>
+      <p class="lead-center">Dengan penuh rasa syukur, kami mengundang Bapak/Ibu yang terhormat untuk menghadiri 
+      <b>Perayaan Ulang Tahun ke-55 Bapak H. Asep Haelusna</b> 
+      di <b>Layalii Lounge Asstro Arabia</b>, Jl. Trunojoyo No. 44 Bandung, 
+      sesudah buka puasa, dalam suasana kebersamaan dengan nuansa Timur Tengah khas Layalii.<br> 
+      Kehadiran Bapak/Ibu merupakan kehormatan bagi kami.</p>
+    </section>
+
+   <!-- Detail Acara -->
+<section class="card detail-card" id="detail" aria-labelledby="detail-title">
+  <h2 id="detail-title">Detail Acara</h2>
+
+  <div class="detail-grid">
+    <div class="detail-item">
+      <div class="detail-icon">
+        <span>📅</span>
+      </div>
+      <div>
+        <strong>Tanggal & Waktu</strong>
+        <small>Selasa, 17 Maret 2026 <br> Pukul 14:00 WIB</small>
+      </div>
+    </div>
+
+    <div class="detail-item">
+      <div class="detail-icon">
+        <span>📍</span>
+      </div>
+      <div>
+        <strong>Lokasi</strong>
+        <small>Layalii Lounge Asstro Arabia<br>Jl. Trunojoyo No.44, Citarum, Kec. Bandung Wetan, Kota Bandung</small>
+      </div>
+    </div>
+
+    <div class="detail-item">
+      <div class="detail-icon">
+        <span>👕</span>
+      </div>
+      <div>
+        <strong>Dresscode</strong>
+        <small>Busana Bebas, <br> Rapi, dan Nyaman</small>
+      </div>
+    </div>
+  </div>
+
+</section>
+
+<!-- Galeri -->
+<section class="card" id="gallery" aria-labelledby="gallery-title">
+  <h2 id="gallery-title">Galeri</h2>
+
+  <div class="gallery-grid">
+    <img src="assets/Asstro-Punclut-1.png" alt="Asstro Skyview Punclut">
+    <img src="assets/Asstro-Punclut-2.png" alt="Asstro Skyview Punclut">
+    <img src="assets/asstro-punclut-3.jpeg" alt="Asstro Skyview Punclut">
+    <img src="assets/asstro-punclut-4.jpeg" alt="Asstro Skyview Punclut">
+    <img src="assets/asstro-punclut-5.jpeg" alt="Asstro Skyview Punclut">
+    <img src="assets/asstro-punclut-6.jpeg" alt="Asstro Skyview Punclut">
+  </div>
+</section>
+
+
+    <!-- Map & Contact -->
+    <section class="card" id="contact" aria-labelledby="contact-title">
+      <h2 id="contact-title">Lokasi</h2>
+
+      <div style="display:grid; grid-template-columns:1fr; gap:18px;">
+        <div class="map-wrap" aria-hidden="false">
+          <!-- Ganti src embed dengan koordinat lokasi apabila perlu -->
+<iframe src="https://www.google.com/maps/embed?pb=!3m2!1sid!2sid!4v1773678215712!5m2!1sid!2sid!6m8!1m7!1srnQwfLQvKY2zy5D8W2917Q!2m2!1d-6.902257230582157!2d107.6145230139148!3f124.9360093494428!4f-3.8197045083164767!5f0.7820865974627469" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>        </div>
+
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <footer role="contentinfo">
+    © 2026 Layalii Lounge Asstro Arabia — Undangan Ulang Tahun ke-55 H. Asep Haelusna
+  </footer>
+
+<!-- Audio controls -->
+<div class="audio-fixed" aria-hidden="false">
+  <button id="playBtn" class="audio-btn" aria-pressed="false" title="Play/Pause Musik">🔈</button>
+  <button id="muteBtn" class="audio-btn" aria-pressed="false" title="Mute/Unmute">🔇</button>
+</div>
+
+<audio id="bgm" src="assets/ceremony.mp3" loop></audio>
+
+  <script>
+
+    const bgm = document.getElementById("bgm");
+  const playBtn = document.getElementById("playBtn");
+  const muteBtn = document.getElementById("muteBtn");
+
+  // PLAY / PAUSE
+  playBtn.addEventListener("click", () => {
+    if (bgm.paused) {
+      bgm.play();
+      playBtn.textContent = "🔊"; // icon saat play
+    } else {
+      bgm.pause();
+      playBtn.textContent = "🔈"; // icon saat pause
+    }
+  });
+
+  // MUTE / UNMUTE
+  muteBtn.addEventListener("click", () => {
+    bgm.muted = !bgm.muted;
+    muteBtn.textContent = bgm.muted ? "🔇" : "🔉";
+  });
+
+    // ===== Scroll Animation (Card Muncul Saat Di-scroll)
+const cards = document.querySelectorAll('.card');
+
+const observer = new IntersectionObserver((entries) => {
+  entries.forEach(entry => {
+    if(entry.isIntersecting){
+      entry.target.classList.add('show');
+    }
+  });
+}, { threshold: 0.15 });
+
+cards.forEach(card => observer.observe(card));
+
+// ===== Smooth parallax effect di hero
+window.addEventListener('scroll', () => {
+  const hero = document.querySelector('.hero');
+  const scrolled = window.scrollY;
+  hero.style.backgroundPositionY = `${scrolled * 0.4}px`;
+});
+
+    
+(function(){
+    const params = new URLSearchParams(window.location.search);
+    const name = params.get('to');
+    const info = params.get('info');
+
+    if(name){
+      const elName = document.getElementById('guestName');
+      if(elName) elName.textContent = decodeURIComponent(name.replace(/\+/g,' '));
+    }
+
+    if(info){
+      const elInfo = document.getElementById('guestInfo');
+      if(elInfo) elInfo.textContent = decodeURIComponent(info.replace(/\+/g,' '));
+    }
+  })();
+
+
+    // ====== Countdown to 12 Dec 2025 14:00 WIB (+07:00) ======
+    (function(){
+      const target = new Date("2026-03-17T18:00:00+07:00").getTime();
+      const dEl = id => document.getElementById(id);
+      function pad2(n){ return String(n).padStart(2,'0'); }
+      function tick(){
+        const now = Date.now();
+        let diff = target - now;
+        if(diff < 0) diff = 0;
+        const days = Math.floor(diff / (1000*60*60*24));
+        const hours = Math.floor((diff % (1000*60*60*24)) / (1000*60*60));
+        const mins = Math.floor((diff % (1000*60*60)) / (1000*60));
+        const secs = Math.floor((diff % (1000*60)) / 1000);
+        dEl('cd-days').textContent = pad2(days);
+        dEl('cd-hours').textContent = pad2(hours);
+        dEl('cd-min').textContent = pad2(mins);
+        dEl('cd-sec').textContent = pad2(secs);
+      }
+      tick(); setInterval(tick,1000);
+    })();
+
+    // ====== RSVP localStorage ======
+    (function(){
+      const form = document.getElementById('rsvpForm');
+      const msg = document.getElementById('rsvpMsg');
+      const KEY = 'asstro_rsvp_v2';
+
+      form.addEventListener('submit', e=>{
+        e.preventDefault();
+        const name = document.getElementById('r-name').value.trim();
+        const phone = document.getElementById('r-phone').value.trim();
+        const attend = document.getElementById('r-attend').value;
+        const note = document.getElementById('r-note').value.trim();
+        if(!name || !phone){
+          msg.textContent = 'Mohon isi nama dan nomor WhatsApp.';
+          return;
+        }
+        const entry = { name, phone, attend, note, ts: new Date().toISOString() };
+        try{
+          const arr = JSON.parse(localStorage.getItem(KEY) || '[]');
+          arr.push(entry);
+          localStorage.setItem(KEY, JSON.stringify(arr));
+          msg.textContent = 'Terima kasih — konfirmasi tersimpan (lokal).';
+          form.reset();
+        }catch(err){
+          console.error(err);
+          msg.textContent = 'Gagal menyimpan. Silakan screenshot dan kirim ke panitia.';
+        }
+      });
+    })();
+
+    // ====== Audio controls & autoplay attempt ======
+    (function(){
+      const audio = document.getElementById('bgm');
+      const playBtn = document.getElementById('playBtn');
+      const muteBtn = document.getElementById('muteBtn');
+
+      // Try to play once (may be blocked)
+      audio.volume = 0.65;
+      audio.play().then(()=> {
+        playBtn.textContent = '🔊';
+        playBtn.setAttribute('aria-pressed','true');
+      }).catch(()=> {
+        playBtn.textContent = '▶️';
+        playBtn.setAttribute('aria-pressed','false');
+      });
+
+      function togglePlay(){
+        if(audio.paused){ audio.play().then(()=>{ playBtn.textContent='🔊'; playBtn.setAttribute('aria-pressed','true'); }).catch(()=>{}); }
+        else{ audio.pause(); playBtn.textContent='▶️'; playBtn.setAttribute('aria-pressed','false'); }
+      }
+      function toggleMute(){
+        audio.muted = !audio.muted;
+        muteBtn.textContent = audio.muted ? '🔇' : '🔈';
+        muteBtn.setAttribute('aria-pressed', String(audio.muted));
+      }
+
+      playBtn.addEventListener('click', togglePlay);
+      muteBtn.addEventListener('click', toggleMute);
+
+      // play on first user gesture if initial blocked
+      ['click','keydown','touchstart'].forEach(ev=>{
+        document.addEventListener(ev, function once(){ audio.play().catch(()=>{}); document.removeEventListener(ev, once); }, {passive:true});
+      });
+    })();
+
+    // Accessibility: focus styles (optional)
+    (function(){
+      document.addEventListener('keydown', function(e){
+        if(e.key === 'Tab') document.documentElement.classList.add('show-focus');
+      });
+    })();
+  </script>
+</body>
+</html>
