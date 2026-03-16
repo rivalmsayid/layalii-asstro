@@ -757,6 +757,12 @@ window.addEventListener('scroll', () => {
         if(e.key === 'Tab') document.documentElement.classList.add('show-focus');
       });
     })();
+    window.addEventListener("load", () => {
+  const audio = document.getElementById("bgm");
+  audio.volume = 0.5;
+  audio.play().catch(()=>{});
+  setTimeout(()=>{ audio.muted = false; }, 800);
+});
   </script>
 </body>
 </html>
